@@ -273,7 +273,7 @@
       <div class="container"> 
           <div class="footer_section_2">
             <h2 class="adderess_text">Skontaktuj się z nami</h2>
-			<form onsubmit="sendEmail(); reset(); return false;">
+			<form action="https://formsubmit.co/bartoszkawalec90@gmail" method="POST">
 				<input type="email" class="email_text" placeholder="Podaj swój e-mail">
 				<button type="submit">Zatwierdź</button>
 			</form>
@@ -328,20 +328,5 @@
    document.getElementById("myNav").style.width = "0%";
    }
 	</script> 
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script>
-		function sendEmail(){
-			Email.send({
-				Host : "smtp.gmail.com",
-				Username : "zwncmail@gmail.com",
-				Password : "8V4FTeH0g5DvckE",
-				To : 'bartoszkawalec90@gmail.com',
-				From : document.getElementById("email").value,
-				Subject : "Nowy Klient",
-				Body : "email:" + document.getElementById("email").value
-			}).then(
-			  message => alert("Wysłano")
-			);
-		}
 </body>
 </html>
